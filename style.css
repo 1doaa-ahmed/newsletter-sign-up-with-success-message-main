@@ -1,0 +1,164 @@
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{ 
+    padding: 0;
+    margin: 0;
+    background-color: var(--DarkSlateGrey);
+    color: var(--DarkSlateGrey);
+    box-sizing: border-box;
+}
+p{
+    font-size: 16px;
+}
+.container {
+    border-radius: 35px;
+    background-color: var(--White);
+    max-width: fit-content;
+    margin: 20px auto;
+    padding: 40px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.thankYouPage{
+    width: fit-content;
+    max-width: 25%;
+}
+.img {
+    width: fit-content;
+    float: left;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+}
+.thankYouPage img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.main {
+    display: inline-block;
+}
+.email {
+    width: 90%;
+}
+h1{
+    font-size: 45px;
+    margin-bottom: 7px;
+}
+ul {
+    list-style-type: none;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 35px;
+}
+.icon {
+    padding-right: 10px ;
+    position: relative;
+    top: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.email { 
+    padding: 0 30px 0 0;
+}
+.email label {
+    width: fit-content;
+    display: inline-block;
+    /* margin-right: 30px; */
+}
+.email div {
+    display: flex;
+    gap: 26%;
+}
+input { 
+    border: 1px gray solid;
+    margin-bottom: 20px;
+    width: calc(100% - 30px);
+    outline: none;
+}
+button {
+    background-color: var(--DarkSlateGrey);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+input , button {
+    padding: 15px;
+    border-radius: 7px;
+}
+button:hover {
+    /* background-color: var(--Tomato); */
+    background-image: linear-gradient(to right , #ff5573 40% , #ff6548 90%) ;
+    box-shadow: var(--Tomato) 0px 10px 18px ;
+}
+.container > img{
+    display: none;
+}
+@media (max-width: 375px) {
+    body {
+        background-color: var(--White);
+        font-size: 12px;
+    }
+    .img img {
+        width: 0px;
+    }
+    .container > img{
+        display: block;
+        position: relative;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container .main {
+        /* padding: 26px; */
+        font-weight: 600; 
+        left: 0px;
+        padding: 5px;
+    }
+    .thankYouPage {
+        max-width: 100%;
+        min-width: fit-content;
+    }
+    .thankYouPage p {
+        line-height: 1.7;
+        min-width: fit-content;
+    }
+    .thankYouPage button {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .thankYouPage .content {
+        margin: auto;
+        width: 80%;
+    }
+    .thankYouPage .content img {
+        margin: auto;
+    }
+    .thankYouPage .content h1{
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+    }
+}
